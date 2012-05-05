@@ -45,13 +45,24 @@ This client was rewritten (client.js) using plain NodeJS libraries and the impac
 The requirements are to measure the rate at which a database can be populated with JSON strings that represent a user’s answers to a questionnaire a la survey. To isolate the impact of the database on the performance another set of tests will be run without any data access.
 
 ### Rate of REST requests
-A measure of how well the different implimentations 
+A measure of how well the different implimentations handle 30,000 requests
+
+![Rate of REST ](https://github.com/knowlecules/rest-stress/raw/master/images/restRate.png)
 
 ### Rate of REST requests with MongoDB inserts
-A measure of how well the different implimentations 
+A measure of how well the different implimentations handle 30,000 requests and subsequent mongoDB insertions
 
-### Overhead 
+![Rate of REST ](https://github.com/knowlecules/rest-stress/raw/master/images/mongoRate.png)
 
+### REST request processing above the baseline
+A measure of the excess processing required to respond to a REST request.
+
+![Rate of REST ](https://github.com/knowlecules/rest-stress/raw/master/images/restOverhead.png)
+
+### REST and MongoDB request processing above the baseline
+A measure of the excess processing required to respond to a REST request that inserts a single document into a MongoDB database.
+ 
+![Rate of REST ](https://github.com/knowlecules/rest-stress/raw/master/images/mongoOverhead.png)
 
 ## It's over. Now what?
 ### What's the lesson?
