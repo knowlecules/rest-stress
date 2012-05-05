@@ -5,6 +5,12 @@ Stress tests against popular REST implimentations for NodeJS along with MongoDB 
 ## Introduction
 As part of an interview for a job I was asked to use some "real" scenarios for inspiration to write some sample code. One of the tests described persisting and accessing a Billion surveys from a REST service. Seeing as I was busy writing an Associative Database interface on top of MongoDB I decided that it would be nice to have a REST service too, effectively killing both those birds. 
 
+installation
+------------
+
+    Sorry, but this was just a POC and I'm not ready to venture into packaging just yet, so git this project and then npm journery and restify. That should do it.
+
+
 ## Defining the scope of the trial
 ### Choosing a REST implimentation
 My first instinct was to grab the project with the highest watch count on github namely [restify](http://mcavage.github.com/node-restify/). I thought that I would be happy with my choice and then quickly knock off the little project. But to my suprise the throughput was awful. I was witnessing 250 requests per second. What I gathered from prior research was that I should be close to 10, 20 times maxing out at 40 times that figure. 
