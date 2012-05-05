@@ -52,17 +52,17 @@ A measure of how well the different implimentations handle 30,000 requests
 ### Rate of REST requests with MongoDB inserts
 A measure of how well the different implimentations handle 30,000 requests and subsequent mongoDB insertions
 
-![Rate of REST ](https://github.com/knowlecules/rest-stress/raw/master/images/mongoRate.png)
+![Rate of REST with Mongo insert ](https://github.com/knowlecules/rest-stress/raw/master/images/restMongoRate.png)
 
 ### REST request processing above the baseline
 A measure of the excess processing required to respond to a REST request.
 
-![Rate of REST ](https://github.com/knowlecules/rest-stress/raw/master/images/restOverhead.png)
+![REST request overhead](https://github.com/knowlecules/rest-stress/raw/master/images/restOverhead.png)
 
 ### REST and MongoDB request processing above the baseline
 A measure of the excess processing required to respond to a REST request that inserts a single document into a MongoDB database.
  
-![Rate of REST ](https://github.com/knowlecules/rest-stress/raw/master/images/mongoOverhead.png)
+![REST with Mongo insert overhead](https://github.com/knowlecules/rest-stress/raw/master/images/restMongoOverhead.png)
 
 ## It's over. Now what?
 ### What's the lesson?
