@@ -47,10 +47,14 @@ The requirements are to measure the rate at which a database can be populated wi
 ### Rate of REST requests
 A measure of how well the different implimentations handle 30,000 requests
 
-![Rate of REST ](https://github.com/knowlecules/rest-stress/raw/master/images/restRate.png)
+![Rate of REST ](https://github.com/knowlecules/rest-stress/raw/master/images/restMongoRate.png)
 
 ### Rate of REST requests with MongoDB inserts
 A measure of how well the different implimentations handle 30,000 requests and subsequent mongoDB insertions
+
+![Rate of REST with Mongo insert ](https://github.com/knowlecules/rest-stress/raw/master/images/restSingleMongoRate.png)
+#### Testing to see whether batching improves insertion rate
+A measure of how well the different implimentations handle 30,000 requests and subsequent mongoDB insertions when inserts are done in batches
 
 ![Rate of REST with Mongo insert ](https://github.com/knowlecules/rest-stress/raw/master/images/restMongoRate.png)
 
@@ -75,4 +79,3 @@ A measure of the excess processing required to respond to a REST request that in
 ### Which is the better server?
 That all depends on what you're looking for. If you need a full featured REST server that has a proven track record and numerous contributors that have probably squashed most of the bugs then you'll probably want to choose either restify or journey. If you're a programmer looking to eek out a few mips to impress the boss and you have a simple requirement then rapid-rest might get you noticed.
 
-Personally, I think I'll write a wrapper so that I can switch out rapid-rest for restify. Just in case ;-)
