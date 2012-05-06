@@ -78,13 +78,16 @@ This chart completes the picture. The entire vertical of processing a REST reque
 
 ## It's over. Now what?
 ### What's the lesson?
+
 ####Generate concise functions in advance
 > I did not dissect any of the code behind [restify](http://mcavage.github.com/node-restify/) or [journey](https://github.com/cloudhead/journey), but I know that the performance difference has everything to do with the number of lines running when a request is made(Javascript is parsed after all). In the case of the REST server architecture, we have a great advantage in the fact that the server is configured in advance. It's here that the request parsing functions should be generated to do the minimum amount of work.
  
 ####Batch mongo inserts
 > A spin off result of this benchmark was figuring out how to improve mongo throughput by sending arrays of objects. If you bother running the benchmarks and do the calculations you'll find a 300% improvement for rapid-rest and 200% for [journey](https://github.com/cloudhead/journey) and [restify](http://mcavage.github.com/node-restify/) above the baseline results. The optimum batch size appears to be more than 4 but less than 15 which is great if you're developing with a cache.
+
 ####Might have to avoid mongo upserts when possible (needs further investigation)
 > Even though the non-safe mode upsert speeds were just as fast as the insert, MongoDB continued spinning well after the response was received. This excess consumption appears non-linear, with smaller tests generating none while the 30,000 iteration tests added a substantial amount. As the database is dropped before every test I can only attribute this slowness to searching through existing items. I did not add an index to the collections which may cure this problem. 
+
 ### Which is the better REST server?
 That all depends on what you're looking for. If you need a full featured REST server that has a proven track record and numerous contributors that have probably squashed most of the bugs then you'll probably want to choose either [restify](http://mcavage.github.com/node-restify/) or [journey](https://github.com/cloudhead/journey). If you're a programmer looking to eke out a few MIPS to impress the boss and you have a simple requirement then implementing rapid-rest might get you noticed.
 
