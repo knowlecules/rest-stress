@@ -2,7 +2,7 @@ var helpers = require('../lib/helpers');
 var routes = require('../lib/node-rest')();
 
 var appName = "NodeMongoStress";
-var port = 8004;
+var port = 8005;
 
 // Requires faith that it opens, but clients have a delayed start so np.
 helpers.db.open(function(err, db) {

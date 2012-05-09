@@ -1,11 +1,11 @@
 var http = require('http');
 var helpers = require('./lib/helpers');
 
-var port = 8004;
+var port = 8005;
 var appName = "StressClient";
 
 var MAX_SURVEYS = 30000;
-var collection ="surveybatched" ; // survey , surveybatched
+var collection ="survey" ; // survey , surveybatched
 helpers.dontUpdate=true;
 
 var surveys = [
